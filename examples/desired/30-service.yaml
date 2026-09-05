@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+  namespace: driftguard-demo
+  labels:
+    driftguard.io/managed: "true"
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: driftguard-demo
+  ports:
+    - name: http
+      port: 80
+      targetPort: http

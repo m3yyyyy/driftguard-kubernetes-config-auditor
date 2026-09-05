@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-settings
+  namespace: driftguard-demo
+  labels:
+    driftguard.io/managed: "true"
+data:
+  LOG_LEVEL: info
+  SERVICE_MODE: production
